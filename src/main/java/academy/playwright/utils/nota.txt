@@ -1,3 +1,5 @@
 # mvn test -Dtest=MotoresTest
 # forma de ejecutar un caso de prueba las primeras veces
 # mvn test -Dtest=NombreDeTest
+# mvn test -Dtest=VersionTest
+# ejercisio pendiente de la pagian 49

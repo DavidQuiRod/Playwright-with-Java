@@ -1,0 +1,3 @@
+# mvn test -Dtest=MotoresTest
+# forma de ejecutar un caso de prueba las primeras veces
+# mvn test -Dtest=NombreDeTest

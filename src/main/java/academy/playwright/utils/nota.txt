@@ -2,4 +2,5 @@
 # forma de ejecutar un caso de prueba las primeras veces
 # mvn test -Dtest=NombreDeTest
 # mvn test -Dtest=VersionTest
-# ejercisio pendiente de la pagian 49
+# ejecucion sin ventana desde terminal mvn compile exec:java -D exec.mainClass=academy.playwright.PrimerScript
+# ejecucion con ventana desde terminal

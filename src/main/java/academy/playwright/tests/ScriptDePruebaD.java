@@ -3,6 +3,7 @@ import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+import com.microsoft.playwright.options.AriaRole;
 
 import java.nio.file.Paths;
 
@@ -17,9 +18,20 @@ public class ScriptDePruebaD {
             pagina.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("evidencias/IngresarUsuario.png")));
             pagina.getByPlaceholder("password").fill("admin123");
             pagina.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("evidencias/Ingresarpassword.png")));
+            //Buena practica
+            //pagina.getByRole(com.microsoft.playwright.options.AriaRole.BUTTON,new Page.GetByRoleOptions().setName("Login")).click();
+            //Funcional
+            //pagina.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Login")).click();
+            //Mas rapido y directo
+            /*Antes de usar la siguiente linea hay que revisar que se esta apuntando bien al elemento
+            * o botón porque puede haber muchos con esa descripcion
+            * existe .first() para el primer elemento
+            * para identificar el segundo se utiliza el nth(#numero del elemento si es el segundo agregar 1
+            * Esto porque es como un vector el 1 es 0, el 2 es el 1 y asi sucecivamente)*/
+            pagina.getByText("Login").nth(1).click();
+            pagina.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("evidencias/DarClickEnBotonLogin.png")));
             System.out.println("Se ingresaron 2 valores en la pagina"+ pagina.url());
             navegador.close();
-
         }
     }
 }

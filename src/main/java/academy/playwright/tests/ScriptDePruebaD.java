@@ -30,7 +30,7 @@ public class ScriptDePruebaD {
             * Esto porque es como un vector el 1 es 0, el 2 es el 1 y asi sucecivamente)*/
             pagina.getByText("Login").nth(1).click();
             //pagina.screenshot(new Page.ScreenshotOptions().setPath(Paths.get("evidencias/DarClickEnBotonLogin.png")));
-            System.out.println("Se ingresaron 2 valores en la pagina"+ pagina.url());
+            System.out.println("Se ingresaron 2 valores en la pagina "+ pagina.url());
             navegador.close();
         }
     }

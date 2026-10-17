@@ -4,3 +4,6 @@
 # mvn test -Dtest=VersionTest
 # ejecucion sin ventana desde terminal mvn compile exec:java -D exec.mainClass=academy.playwright.PrimerScript
 # ejecucion con ventana desde terminal
+
+#Verificar como funciona la siguiente forma de correr un scrip con JUnit
+mvn test -Dtest=LoginTest#shouldLoginWithValidCredentials

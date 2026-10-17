@@ -1,9 +1,11 @@
 package academy.playwright;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserContext;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import java.nio.file.Paths;
+
 public class PrimerScript {
     public static void main(String[] args) {
 // try-with-resources: Playwright se cierra solo al terminar
